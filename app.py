@@ -39,7 +39,7 @@ async def getdata(
     features = [snoring_range, respiration_rate, body_temperature, limb_movement_rate,
                 blood_oxygen_levels, eye_movement, hours_of_sleep, heart_rate]
     
-    final_features = np.array(features).reshape(1, -1)
+    final_features = [np.array(features)]
     result1 = gnb_model.predict(final_features)
     
     if result1 == 0:
