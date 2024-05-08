@@ -1,47 +1,56 @@
-from flask import Flask, render_template, request
+from fastapi import FastAPI, Form
+from fastapi.middleware.cors import CORSMiddleware
 import pickle
-import pandas as pd
 import numpy as np
-#import matplotlib as plt
 
-app = Flask(__name__,template_folder='template')
-gnb_model=pickle.load(open('model_pkl.pkl','rb'))
+app = FastAPI()
 
-@app.route('/')
+# CORS middleware to allow requests from your React app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Adjust this to your React frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+gnb_model = pickle.load(open('model_pkl.pkl', 'rb'))
+
+@app.get("/test")
+async def test_get():
+    return {"message": "This is a test GET endpoint Chandra"}
+
+
+@app.get("/")
 def index():
-    return render_template("index.html")
+    return {"message": "Welcome to Human Stress Level Detection!"}
 
-@app.route('/result', methods=['POST'])
-def getdata():
-
-    features = [float(x) for x in request.form.values()]
-    #print(features)
-    final_features = [np.array(features)]
-    #print(final_features)
-
-    result1 = gnb_model.predict(final_features)
-    print(result1)
-    if result1==0:
-        r="Low/Normal Stress!"
-    if result1==1:
-        r="Medium low Stress!"
-    if result1==2:
-        r="Medium Stress!"
-    if result1==3:
-        r="Medium high Stress!"
-    else:
-        r="High Stress!"
+@app.post("/result")
+async def getdata(
+    snoring_range: float = Form(...),
+    respiration_rate: float = Form(...),
+    body_temperature: float = Form(...),
+    limb_movement_rate: float = Form(...),
+    blood_oxygen_levels: float = Form(...),
+    eye_movement: float = Form(...),
+    hours_of_sleep: float = Form(...),
+    heart_rate: float = Form(...),
+):
+    features = [snoring_range, respiration_rate, body_temperature, limb_movement_rate,
+                blood_oxygen_levels, eye_movement, hours_of_sleep, heart_rate]
     
-    #for probability chart    
-    # stress_level_labels = np.array(["Low/Normal", "Medium Low", "Medium", "Medium High", "High"])
-    # plt.figure(figsize=(6,5))
-    # plt.bar(stress_level_labels, gnb_model.predict_proba(final_features)[0], color='green')
-    # plt.xlabel('Stress Levels')
-    # plt.ylabel('Probability')
-    # plt.title('Predicted Stress Level Probabilities')
-    # store_graph=plt.show()
-
-    return render_template('show.html',  res=r)
-
-if __name__=="__main__":
-    app.run(debug=True)
+    final_features = np.array(features).reshape(1, -1)
+    result1 = gnb_model.predict(final_features)
+    
+    if result1 == 0:
+        r = "Low/Normal Stress!"
+    elif result1 == 1:
+        r = "Medium low Stress!"
+    elif result1 == 2:
+        r = "Medium Stress!"
+    elif result1 == 3:
+        r = "Medium high Stress!"
+    else:
+        r = "High Stress!"
+    
+    return {"result": r}
