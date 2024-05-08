@@ -1,0 +1,272 @@
+<!-- <html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=number] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 230px;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    
+    }
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+    }
+    
+    .form_wrapper {
+      flex:1;
+      text-align: center;
+    }
+     
+    </style>
+<body>
+    <center><h2 style="color:blue">Human Stress Level Detection Form</h2></center>
+    
+<div class="container">
+<form action="/result" method="POST">
+	<label for="snoring_range">Snoring range(in dB)</label>
+	<input type="number" min="40" max="120" id="snoring_range" name="snoring_range" required>
+	<br>
+	<label for="respiration_rate">Respiration rate(in bpm)</label>
+	<input type="number" min="16" max="35" id="respiration_rate" name="respiration_rate" required>
+	<br>
+    <label for="body_temperature">Body temperature(in &deg;F)</label>
+	<input type="number" min="85" max="99" id="body_temperature" name="body_temperature" required>
+	<br>
+    <label for="limb_movement_rate">Limb movement rate(in sec)</label>
+	<input type="number" min="4" max="25" id="limb_movement_rate" name="limb_movement_rate" required>
+	<br>
+    <label for="blood_oxygen_levels">Blood oxygen levels(in %)</label>
+	<input type="number" min="75" max="97" id="blood_oxygen_levels" name="blood_oxygen_levels" required>
+	<br>
+    <label for="eye_movement">Rapid Eye movement</label>
+	<input type="number" min="60" max="120" id="eye_movement" name="eye_movement" required>
+	<br>
+    <label for="hours_of_sleep">Hours of sleep</label>
+	<input type="number" min="0" max="9" id="hours_of_sleep" name="hours_of_sleep" required>
+	<br>
+    <label for="heart_rate">Heart rate(in bpm)</label>
+	<input type="number" min="50" max="100" id="heart_rate" name="heart_rate" required>
+	<br>
+
+	<br>
+    <div class="form_wrapper">
+	<input type="submit" value="Submit"></div>
+</form>
+</div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 210px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="/result" method="POST">
+        <h2>Human Stress Level Detection Form</h2>
+        <label for="snoring_range">Snoring range (in dB)</label>
+        <input type="number" min="40" max="120" id="snoring_range" name="snoring_range" required><br>
+        <label for="respiration_rate">Respiration rate (in bpm)</label>
+        <input type="number" min="16" max="35" id="respiration_rate" name="respiration_rate" required><br>
+        <label for="body_temperature">Body temperature (in &deg;F)</label>
+        <input type="number" min="85" max="99" id="body_temperature" name="body_temperature" required><br>
+        <label for="limb_movement_rate">Limb movement rate (in sec)</label>
+        <input type="number" min="4" max="25" id="limb_movement_rate" name="limb_movement_rate" required><br>
+        <label for="blood_oxygen_levels">Blood oxygen levels (in %)</label>
+        <input type="number" min="75" max="97" id="blood_oxygen_levels" name="blood_oxygen_levels" required><br>
+        <label for="eye_movement">Rapid Eye Movement</label>
+        <input type="number" min="60" max="120" id="eye_movement" name="eye_movement" required><br>
+        <label for="hours_of_sleep">Hours of sleep</label>
+        <input type="number" min="0" max="9" id="hours_of_sleep" name="hours_of_sleep" required><br>
+        <label for="heart_rate">Heart rate (in bpm)</label>
+        <input type="number" min="50" max="100" id="heart_rate" name="heart_rate" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Professional background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        input[type="number"] {
+            width: calc(100% - 210px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="/result" method="POST">
+        <h2>Human Stress Level Detection Form</h2>
+        <label for="snoring_range">Snoring range (in dB)</label>
+        <input type="number" min="40" max="120" id="snoring_range" name="snoring_range" required><br>
+        <label for="respiration_rate">Respiration rate (in bpm)</label>
+        <input type="number" min="16" max="35" id="respiration_rate" name="respiration_rate" required><br>
+        <label for="body_temperature">Body temperature (in &deg;F)</label>
+        <input type="number" min="85" max="99" id="body_temperature" name="body_temperature" required><br>
+        <label for="limb_movement_rate">Limb movement rate (in sec)</label>
+        <input type="number" min="4" max="25" id="limb_movement_rate" name="limb_movement_rate" required><br>
+        <label for="blood_oxygen_levels">Blood oxygen levels (in %)</label>
+        <input type="number" min="75" max="97" id="blood_oxygen_levels" name="blood_oxygen_levels" required><br>
+        <label for="eye_movement">Rapid Eye Movement</label>
+        <input type="number" min="60" max="120" id="eye_movement" name="eye_movement" required><br>
+        <label for="hours_of_sleep">Hours of sleep</label>
+        <input type="number" min="0" max="9" id="hours_of_sleep" name="hours_of_sleep" required><br>
+        <label for="heart_rate">Heart rate (in bpm)</label>
+        <input type="number" min="50" max="100" id="heart_rate" name="heart_rate" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
