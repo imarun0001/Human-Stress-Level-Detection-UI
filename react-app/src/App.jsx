@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <StressForm />
-      <TestComponent />
+      {/* <TestComponent /> */}
     </>
   )
 }
