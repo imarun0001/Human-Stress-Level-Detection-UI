@@ -2,7 +2,7 @@ from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 import pickle
 import numpy as np
-# import matplotlib.pyplot as plt  # Import matplotlib for plotting
+
 
 app = FastAPI()
 
@@ -55,12 +55,3 @@ async def getdata(
         r = "High Stress!"
     
     return {"result": r, "result_proba": result_proba.tolist(),"result_no":result1.tolist()}  # Convert result_proba to a list
-
-# for probability chart    
-# stress_level_labels = np.array(["Low/Normal", "Medium Low", "Medium", "Medium High", "High"])
-# plt.figure(figsize=(6,5))
-# plt.bar(stress_level_labels, gnb_model.predict_proba(final_features)[0], color='green')
-# plt.xlabel('Stress Levels')
-# plt.ylabel('Probability')
-# plt.title('Predicted Stress Level Probabilities')
-# store_graph = plt.show()

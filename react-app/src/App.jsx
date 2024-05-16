@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import StressForm from './components/StressForm'
-import TestComponent from './components/TestComponent'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home' 
+import Detection from './pages/Detection'
+import About from './pages/About'
 
 function App() {
-  
   return (
-    <>
-      <StressForm />
-      {/* <TestComponent /> */}
-    </>
+    <div className="flex flex-col min-h-screen">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/detection' element={<Detection/>}/>
+          <Route path='/about' element={<About/>}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   )
 }
 
