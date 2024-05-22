@@ -19,7 +19,7 @@ gnb_model = pickle.load(open('model_pkl.pkl', 'rb'))
 
 @app.get("/test")
 async def test_get():
-    return {"message": "This is a test GET endpoint Chandra"}
+    return {"message": "This is a test GET endpoint "}
 
 @app.get("/")
 def index():

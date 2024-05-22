@@ -1,0 +1,5 @@
+numpy
+fastapi
+pandas
+scikit-learn
+npm
