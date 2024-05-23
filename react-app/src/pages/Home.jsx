@@ -65,6 +65,11 @@ const Home = () => {
                 Have questions or need help? Our team is here to assist you. Contact us today to learn more about our
                 stress detection app.
                 </p>
+                <p  className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <b><font color="black">stressreliefgroup@gmail.com</font></b>
+                </p>
+              
+                
             </div>
             <div  className="mx-auto w-full max-w-sm space-y-2">
                 <p  className="text-xs text-gray-500 dark:text-gray-400">
