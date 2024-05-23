@@ -5,20 +5,21 @@ import { Bar } from 'react-chartjs-2';
 
 function StressForm() {
   const [formData, setFormData] = useState({
-    snoring_range: 90,
-    respiration_rate: 20,
-    body_temperature: 90,
-    limb_movement_rate: 20,
-    blood_oxygen_levels: 80,
-    eye_movement: 70,
-    hours_of_sleep: 9,
-    heart_rate: 90
+    snoring_range: '',
+    respiration_rate: '',
+    body_temperature: '',
+    limb_movement_rate: '',
+    blood_oxygen_levels: '',
+    eye_movement:'',
+    hours_of_sleep:'',
+    heart_rate: ''
   });
   const [result, setResult] = useState('');
   const [result_proba, setResultProba] = useState(null);
   const [errors, setErrors] = useState({});
   const [result_no, setResult_no] = useState('');
-  let resultNo = [...result_no] ;
+  let resultNo = [...result_no][0] ;
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,23 +36,30 @@ function StressForm() {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:8000/result', formData, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      });
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post('http://localhost:8000/result', formData, {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
+        });
 
-      setResult(response.data.result);
-      setResultProba(response.data.result_proba);
-      setResult_no(response.data.result_no);
-      // console.log(result_no); 
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+        setResult(response.data.result);
+        setResultProba(response.data.result_proba);
+        setResult_no(response.data.result_no);
+        // console.log(result_no); 
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    useEffect(() => {
+      // Call handleSubmit on component mount or when formData changes
+      if (Object.keys(formData).length > 8) {
+        handleSubmit();
+      }
+    }, [formData]);
 
   // Prepare data for the chart
   const chartData = {
@@ -84,8 +92,10 @@ function StressForm() {
     case 3:
       textColor = 'text-red-500';
       break;
-    default:
+    case 4:
       textColor = 'text-red-700';
+    default:
+      textColor = 'text-black';
       break;
   }
 

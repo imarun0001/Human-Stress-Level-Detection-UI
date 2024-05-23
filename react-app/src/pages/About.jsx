@@ -21,10 +21,10 @@ export default function About() {
           <div className="container grid grid-cols-1 gap-8 px-4 md:px-6 lg:grid-cols-2 xl:grid-cols-3">
             <div className="flex flex-col items-center space-y-4">
               <img
-                alt="John Doe"
+                alt="Loading..."
                 className="rounded-full"
                 height={150}
-                src="https://via.placeholder.com/150"
+                src="../src/assets/DP/chandra.jpg"
                 style={{
                   aspectRatio: "150/150",
                   objectFit: "cover",
@@ -32,17 +32,16 @@ export default function About() {
                 width={150}
               />
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">John Doe</h3>
-                <p className="text-gray-500 dark:text-gray-400">Project Lead</p>
+                <h3 className="text-xl font-bold">Chandra Sekhar Karmakar</h3>
+                {/* <p className="text-gray-500 dark:text-gray-400">Project Lead</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  John is an experienced project manager with a passion for developing innovative solutions that improve
-                  people's lives.
+                Chandra developed this website and created an SVM model in machine learning.
                 </p>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <img
-                alt="Jane Smith"
+                alt="Loading..."
                 className="rounded-full"
                 height={150}
                 src="https://via.placeholder.com/150"
@@ -53,11 +52,10 @@ export default function About() {
                 width={150}
               />
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">Jane Smith</h3>
-                <p className="text-gray-500 dark:text-gray-400">Data Scientist</p>
+                <h3 className="text-xl font-bold">Arunanshu Patra</h3>
+                {/* <p className="text-gray-500 dark:text-gray-400">Data Scientist</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  Jane is a skilled data scientist who specializes in machine learning and data analysis, helping to power
-                  the project's cutting-edge algorithms.
+                Arunanshu, a skilled data scientist specializing in machine learning and data analysis, developed the project's data visualization and analysis capabilities, powering its cutting-edge algorithms.
                 </p>
               </div>
             </div>

@@ -66,7 +66,7 @@ const Home = () => {
                 stress detection app.
                 </p>
                 <p  className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                <b><font color="black">stressreliefgroup@gmail.com</font></b>
+                  <font color="gray-300">stressreliefgroup@gmail.com</font>
                 </p>
               
                 
