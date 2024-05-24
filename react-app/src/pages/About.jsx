@@ -35,7 +35,7 @@ export default function About() {
                 <h3 className="text-xl font-bold">Chandra Sekhar Karmakar</h3>
                 {/* <p className="text-gray-500 dark:text-gray-400">Project Lead</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                Chandra developed this website and created an SVM model in machine learning.
+                Chandra, developed the frontend of this website using React and created the Support vector machine model in machine learning.
                 </p>
               </div>
             </div>
@@ -44,10 +44,10 @@ export default function About() {
                 alt="Loading..."
                 className="rounded-full"
                 height={150}
-                src="https://via.placeholder.com/150"
+                src="../src/assets/DP/arunanshu.jpg"
                 style={{
                   aspectRatio: "150/150",
-                  objectFit: "cover",
+                  objectFit: "fill",
                 }}
                 width={150}
               />
@@ -55,70 +55,64 @@ export default function About() {
                 <h3 className="text-xl font-bold">Arunanshu Patra</h3>
                 {/* <p className="text-gray-500 dark:text-gray-400">Data Scientist</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                Arunanshu, a skilled data scientist specializing in machine learning and data analysis, developed the project's data visualization and analysis capabilities, powering its cutting-edge algorithms.
+                Arunanshu, developed the backend of project and worked on Feature Engineering & also on Gaussian Naive Bayes Model .
                 </p>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <img
-                alt="Michael Johnson"
+                alt="Loading..."
                 className="rounded-full"
                 height={150}
-                src="https://via.placeholder.com/150"
+                src="../src/assets/DP/monodeep.jpg"
                 style={{
                   aspectRatio: "150/150",
-                  objectFit: "cover",
+                  objectFit: "fill",
                 }}
                 width={150}
               />
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">Michael Johnson</h3>
-                <p className="text-gray-500 dark:text-gray-400">Software Engineer</p>
+                <h3 className="text-xl font-bold">Monodeep Biswas</h3>
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  Michael is a talented software engineer who has been instrumental in building the project's robust and
-                  user-friendly platform.
+                  Monodeep, worked on EDA of this project for better analysis and created the k-NN model .
                 </p>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <img
-                alt="Emily Davis"
+                alt="Loading..."
                 className="rounded-full"
                 height={150}
-                src="https://via.placeholder.com/150"
+                src="../src/assets/DP/dipak.jpg"
                 style={{
                   aspectRatio: "150/150",
-                  objectFit: "cover",
+                  objectFit: "absolute",
                 }}
                 width={150}
               />
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">Emily Davis</h3>
-                <p className="text-gray-500 dark:text-gray-400">UX Designer</p>
+                <h3 className="text-xl font-bold">Dipak Kumar Yadav</h3>
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  Emily is a user experience designer who has crafted the intuitive and visually appealing interface of
-                  the project, ensuring a seamless user experience.
+                  Dipak, worked on Data cleaning and preprocessing of this prject and worked on Decision Tree Model.
                 </p>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <img
-                alt="David Lee"
+                alt="Loading..."
                 className="rounded-full"
                 height={150}
-                src="https://via.placeholder.com/150"
+                src="../src/assets/DP/joy.jpg"
                 style={{
                   aspectRatio: "150/150",
-                  objectFit: "cover",
+                  objectFit:"fill",
                 }}
                 width={150}
               />
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">David Lee</h3>
-                <p className="text-gray-500 dark:text-gray-400">Clinical Psychologist</p>
+                <h3 className="text-xl font-bold">Joy Chatterjee</h3>
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  David is a clinical psychologist who has provided valuable insights and expertise to ensure the
-                  project's effectiveness in supporting mental health and well-being.
+                  Joy, worked on Logistic Regression Model of this project.
                 </p>
               </div>
             </div>

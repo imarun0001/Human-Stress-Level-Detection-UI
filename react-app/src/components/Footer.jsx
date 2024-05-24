@@ -19,7 +19,7 @@ function Footer() {
         </nav> */}
       <div className="text-center mt-4 text-gray-500 mb-3 md:mr-36 flex-1">
         <p>© {currentYear} Stress Detect, IND. All rights reserved</p>
-        <p>Schedule time with me</p>
+         <p>Made in India</p> 
       </div>
       </div>
     </footer>

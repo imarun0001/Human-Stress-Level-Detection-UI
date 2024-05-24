@@ -25,8 +25,6 @@ In both terminal:
 
 >pip install -r requirements.txt
 
->npm install chart.js
-
 
 In first terminal :
 

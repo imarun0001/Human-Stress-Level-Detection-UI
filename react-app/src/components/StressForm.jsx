@@ -94,6 +94,7 @@ function StressForm() {
       break;
     case 4:
       textColor = 'text-red-700';
+      break;
     default:
       textColor = 'text-black';
       break;
@@ -210,7 +211,7 @@ function StressForm() {
               value={formData.hours_of_sleep}
               onChange={handleChange}
               min="0"
-              max="9"
+              max="12"
               step="0.001"
               required
               className={`shadow-sm rounded-md w-full px-3 py-2 border ${errors.hours_of_sleep ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-indigo-500 focus:border-indigo-500`}
