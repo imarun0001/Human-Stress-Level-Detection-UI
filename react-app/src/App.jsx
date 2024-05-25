@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -9,7 +9,6 @@ import About from './pages/About'
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -17,7 +16,6 @@ function App() {
           <Route path='/about' element={<About/>}/>
         </Routes>
         <Footer />
-      </BrowserRouter>
     </div>
   )
 }
