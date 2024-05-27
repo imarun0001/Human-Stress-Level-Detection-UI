@@ -35,7 +35,7 @@ export default function About() {
                 <h3 className="text-xl font-bold">Chandra Sekhar Karmakar</h3>
                 {/* <p className="text-gray-500 dark:text-gray-400">Project Lead</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                Chandra, developed the frontend of this website using React and created the Support vector machine model in machine learning.
+                Chandra, developed the frontend of this website using React, worked on EDA and created the Support vector machine model in machine learning.
                 </p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function About() {
                 <h3 className="text-xl font-bold">Arunanshu Patra</h3>
                 {/* <p className="text-gray-500 dark:text-gray-400">Data Scientist</p> */}
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                Arunanshu, developed the backend of project and worked on Feature Engineering & also on Gaussian Naive Bayes Model .
+                Arunanshu, developed the backend of project and worked on building the prediction system & also on Gaussian Naive Bayes Model .
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function About() {
               <div className="space-y-2 text-center">
                 <h3 className="text-xl font-bold">Monodeep Biswas</h3>
                 <p className="max-w-[300px] text-gray-500 dark:text-gray-400">
-                  Monodeep, worked on EDA of this project for better analysis and created the k-NN model .
+                  Monodeep, worked on Feature Engineering of this project and also created the k-NN model .
                 </p>
               </div>
             </div>
