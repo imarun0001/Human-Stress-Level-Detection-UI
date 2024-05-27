@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home' 
 import Detection from './pages/Detection'
 import About from './pages/About'
+import './App.css'
 
 function App() {
   return (
